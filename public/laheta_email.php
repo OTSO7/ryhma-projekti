@@ -1,14 +1,14 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ota vastaan lomakkeen tiedot ja varmista turvallisuus
+    // Otetaan lomakkeen tiedot
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
     $message = htmlspecialchars(trim($_POST['message']));
 
-    // Tarkista että kentät eivät ole tyhjiä
+    // Tarkista, että kentät eivät ole tyhjiä
     if (!empty($name) && !empty($email) && !empty($message)) {
         // Aseta vastaanottajan sähköpostiosoite
-        $to = "turosburger@gmail.com"; 
+        $to = "turosburger@gmail.com";
 
         // Aseta sähköpostin otsikko
         $subject = "Uusi palaute Turo's Burgerin sivustolta";
@@ -24,14 +24,84 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Lähetä sähköposti
         if (mail($to, $subject, $email_message, $headers)) {
-            echo "Kiitos palautteestasi!";
+            echo '<!DOCTYPE html>
+            <html lang="fi">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Kiitos palautteestasi</title>
+                <style>
+                    body { font-family: Arial, sans-serif; }
+                    .message-container { max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; }
+                    p { font-size: 18px; }
+                </style>
+            </head>
+            <body>
+                <div class="message-container">
+                    <p>Kiitos palautteestasi!</p>
+                    <p>Sinut ohjataan takaisin etusivulle...</p>
+                </div>
+                <meta http-equiv="refresh" content="3;url=index.html">
+            </body>
+            </html>';
         } else {
-            echo "Lomakkeen lähetys epäonnistui. Yritä uudelleen myöhemmin.";
+            echo '<!DOCTYPE html>
+            <html lang="fi">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Virhe</title>
+                <style>
+                    body { font-family: Arial, sans-serif; }
+                    .message-container { max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; }
+                    p { font-size: 18px; }
+                </style>
+            </head>
+            <body>
+                <div class="message-container">
+                    <p>Lomakkeen lähetys epäonnistui. Yritä uudelleen myöhemmin.</p>
+                </div>
+            </body>
+            </html>';
         }
     } else {
-        echo "Kaikki kentät ovat pakollisia.";
+        echo '<!DOCTYPE html>
+        <html lang="fi">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Virhe</title>
+            <style>
+                body { font-family: Arial, sans-serif; }
+                .message-container { max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; }
+                p { font-size: 18px; }
+            </style>
+        </head>
+        <body>
+            <div class="message-container">
+                <p>Kaikki kentät ovat pakollisia.</p>
+            </div>
+        </body>
+        </html>';
     }
 } else {
-    echo "Virheellinen pyyntö.";
+    echo '<!DOCTYPE html>
+    <html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Virhe</title>
+        <style>
+            body { font-family: Arial, sans-serif; }
+            .message-container { max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; }
+            p { font-size: 18px; }
+        </style>
+    </head>
+    <body>
+        <div class="message-container">
+            <p>Virheellinen pyyntö.</p>
+        </div>
+    </body>
+    </html>';
 }
 ?>
