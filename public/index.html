@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turo's Burger</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <nav>
+            <div class="logo">Turo's Burger</div>
+            <ul>
+                <li><a href="#home">Etusivu</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="about.html">Meistä</a></li>
+                <li><a href="#contact">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Tervetuloa Turo's Burgeriin</h1>
+                <p>Paras paikka herkullisille hampurilaisille!</p>
+                <a href="#menu" class="btn">Tutustu Menuun</a>
+            </div>
+        </section>
+
+        <section id="menu" class="menu">
+            <h2>Menu</h2>
+            <p>Katso herkulliset hampurilaisemme. Hintaan sisältyy Burger, pienet ranskalaiset ja juoma.</p>
+            <ul class="menu-list">
+                <li>
+                    <span class="burger-name">Classic Burger</span>
+                    <span class="price">8.90€</span>
+                </li>
+                <li>
+                    <span class="burger-name">Cheese Burger</span>
+                    <span class="price">9.50€</span>
+                </li>
+                <li>
+                    <span class="burger-name">Bacon Burger</span>
+                    <span class="price">10.50€</span>
+                </li>
+                <li>
+                    <span class="burger-name">Veggie Burger</span>
+                    <span class="price">8.90€</span>
+                </li>
+                <li>
+                    <span class="burger-name">Double Trouble</span>
+                    <span class="price">12.50€</span>
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="contact" class="contact">
+    <h2>Yhteystiedot</h2>
+    <div class="contact-info">
+        <div class="contact-item">
+            <h3>Osoite</h3>
+            <p>Turo's Burger<br>
+               Burgerinkatu 5<br>
+               65200 Vaasa<br>
+               Suomi</p>
+        </div>
+        <div class="contact-item">
+            <h3>Puhelin</h3>
+            <p>+358 40 123 4567</p>
+        </div>
+        <div class="contact-item">
+            <h3>Sähköposti</h3>
+            <p>info@turosburger.fi</p>
+        </div>
+        <div class="contact-item">
+            <h3>Aukioloajat</h3>
+            <p>Ma-Pe: 11:00 - 22:00<br>
+               La: 12:00 - 23:00<br>
+               Su: Suljettu</p>
+        </div>
+    </div>
+</section>
+        
+       <section id="feedback" class="feedback">
+    <h2>Anna Palautetta</h2>
+    <form action="SKRIPTI_TÄHÄN.php" method="post" class="feedback-form">
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Viesti:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit" class="btn">Lähetä</button>
+    </form>
+</section>
+        
+        <section id="maps" class="maps">
+    <h2>Meidän Sijaintimme</h2>
+    <div class="maps-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2274.867228631559!2d21.611550715932357!3d63.09450898115462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468c0d5d03274595%3A0x6e1ed9b186b7f1f0!2sBurgerinkatu%205%2C%2065200%20Vaasa!5e0!3m2!1sen!2sfi!4v1692015875280!5m2!1sen!2sfi"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Turo's Burger.</p>
+    </footer>
+</body>
+</html>
