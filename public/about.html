@@ -6,35 +6,79 @@
     <title>Turo's Burger</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>h2 {
+    color: #b71c1c;
+}
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-text, .about-image {
+    flex: 1;
+    padding: 20px;
+}
+.about-image img, .location img {
+    max-width: 100%;
+    height: auto;
+
+}
+.location img {
+    width: 150px; /* Määritä haluttu leveys */
+    height: auto; /* Korkeus automaattisesti säilyttää kuvasuhteen */
+    object-fit: cover; /* Varmistaa, että kuvat täyttävät tilan ilman venytystä */
+    margin-right: 20px; /* Lisää tilaa kuvan ja tekstin välille */ </style>
 </head>
 <body>
     <div class="wrapper">
-    <header>
-        <nav>
-            <div class="logo">Turo's Burger</div>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="index.html#menu">Menu</a></li>
-                <li><a href="about.html">Meistä</a></li>
-                <li><a href="index.html#contact">Yhteystiedot</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header>
+            <nav>
+                <div class="logo">Turo's Burger</div>
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html#contact">Yhteystiedot</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section id="about" class="about">
-    <h2>Meistä</h2>
-    <div class="about-content">
-        <div class="about-text">
-            <p>Turo's Burger on vuonna 2020 Vaasassa perustettu perheyritys, joka on omistautunut tarjoamaan asiakkailleen herkullisia ja laadukkaita hampurilaisia. Meille on tärkeää käyttää vain parhaita raaka-aineita ja valmistaa kaikki ruoat rakkaudella. Tavoitteenamme on luoda unohtumattomia makuelämyksiä ja tarjota asiakkaillemme ensiluokkaista palvelua joka päivä.</p>
-            <p>Olemme ylpeitä juuristamme Vaasassa ja sitoutuneita tukemaan paikallista yhteisöä. Tule käymään Turo's Burgerissa ja koe itse, miksi olemme yksi kaupungin suosituimmista ruokapaikoista!</p>
-        </div>
-        <div class="about-image">
-           <img src="images/mesta.jpg" alt="Turo's Burger Image">
-        </div>
-    </div>
-</section>
+        <section id="about" class="about">
+            <h2>Meistä</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Tervetuloa Turos Burgeriin – Tampereen omaan burgerparatiisiin! Olemme ylpeitä voidessamme tarjota herkullisia, käsin tehtyjä burgereita kolmen eri ravintolamme voimin ympäri kaupunkia. Meille tärkeintä on laatu, maku ja asiakastyytyväisyys, ja haluamme tarjota unohtumattoman burgerikokemuksen jokaiselle vieraallemme.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/mesta.jpg" alt="Turo's Burger Image">
+                </div>
+            </div>
+        </section>
 
-        
+        <section id="locations">
+            <h2>Ravintoloidemme sijainnit</h2>
+            
+            <section class="location">
+                <h3>1. Keskustorin Turos Burger</h3>
+                <p><strong>Osoite:</strong> Keskustori 1, 33100 Tampere</p>
+                <p>Tampereen sydämessä sijaitseva Keskustorin ravintolamme tarjoaa täydellisen paikan nauttia burgereista kaupungin sykkeen keskellä. Olitpa sitten ostoksilla, työmatkalla tai iltaa viettämässä, Keskustorin Turos Burger on helposti saavutettavissa.</p>
+                <img src="images/mesta.jpg" alt="Keskustorin Turo's Burger">
+            </section>
+
+            <section class="location">
+                <h3>2. Hervannan Turos Burger</h3>
+                <p><strong>Osoite:</strong> Insinöörinkatu 30, 33720 Tampere</p>
+                <p>Hervannan modernissa ja eläväisessä kaupunginosassa sijaitseva ravintolamme on suosittu niin opiskelijoiden kuin paikallistenkin keskuudessa. Tule nauttimaan rennosta tunnelmasta ja maistuvista burgereista!</p>
+                <img src="images/mesta2.jpg" alt="Hervannan Turo's Burger">
+            </section>
+
+            <section class="location">
+                <h3>3. Lielahden Turos Burger</h3>
+                <p><strong>Osoite:</strong> Lielahdenkatu 15, 33400 Tampere</p>
+                <p>Lielahden ravintolamme tarjoaa lämpimän ja kutsuvan ympäristön kaupunkilaisille ja ostosmatkailijoille. Tämä ravintola on täydellinen paikka rentoutua ostosten jälkeen tai nauttia perheen ja ystävien seurasta maukkaiden burgerien äärellä.</p>
+                <img src="images/mesta3.jpg" alt="Lielahden Turo's Burger">
+            </section>
+        </section>
     </div>
 
     <footer>
