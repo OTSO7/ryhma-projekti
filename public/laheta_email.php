@@ -1,6 +1,7 @@
 <?php
+// Tarkista, onko lomake lähetetty POST-menetelmällä
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Otetaan lomakkeen tiedot
+    // Ota lomakkeen tiedot ja puhdista ne mahdollisista haitallisista merkinnöistä
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
     $message = htmlspecialchars(trim($_POST['message']));
@@ -22,8 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers = "From: $email\r\n";
         $headers .= "Reply-To: $email\r\n";
 
-        // Lähetä sähköposti
+        // Lähetä sähköposti ja tarkista, onnistuiko lähetys
         if (mail($to, $subject, $email_message, $headers)) {
+            // Jos lähetys onnistui, näytä kiitosviesti ja ohjaa takaisin etusivulle 3 sekunnin kuluttua
             echo '<!DOCTYPE html>
             <html lang="fi">
             <head>
@@ -45,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </body>
             </html>';
         } else {
+            // Jos lähetys epäonnistui, näytä virheviesti
             echo '<!DOCTYPE html>
             <html lang="fi">
             <head>
@@ -65,6 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </html>';
         }
     } else {
+        // Jos kentät ovat tyhjiä, näytä virheviesti
         echo '<!DOCTYPE html>
         <html lang="fi">
         <head>
@@ -85,6 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </html>';
     }
 } else {
+    // Jos pyyntö ei ole POST-menetelmällä, näytä virheviesti
     echo '<!DOCTYPE html>
     <html lang="fi">
     <head>

@@ -1,22 +1,23 @@
+/* Määrittelee mukautetun fontin 'Logo' ja lataa sen tiedostosta */
 @font-face {
     font-family: 'Logo';
     src: url('fonts/lemon-milk-font/LemonMilkBold-gx2B3.otf') format('opentype');
 }
 
+/* Määrittelee mukautetun fontin 'text' ja lataa sen tiedostosta */
 @font-face {
     font-family: 'text';
     src: url('fonts/lemon-milk-font/LemonMilkLight-owxMq.otf') format('opentype');
 }
 
+/* Määrittelee mukautetun fontin 'second' ja lataa sen tiedostosta */
 @font-face {
     font-family: 'second';
     src: url('fonts/lemon-milk-font/LemonMilkRegular-X3XE2.otf') format('opentype');
 }
 
-
+/* Määrittelee koko sivuston yleiset tyylit */
 body {
-    display: flex;
-    flex-direction: column;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -26,10 +27,12 @@ body {
     color: #333;
 }
 
+/* Määrittelee wrapper-elementin tyylit */
 .wrapper {
     flex: 1;
 }
 
+/* Määrittelee header-elementin tyylit */
 header {
     font-family: 'text';
     background-color: #2B322D;
@@ -39,10 +42,14 @@ header {
     z-index: 1000;
 }
 
+/* Määrittelee section-elementtien tyylit */
 section {
     scroll-margin-top: 80px;
+    padding: 3em 1em;
+    text-align: center;
 }
 
+/* Määrittelee navigointipalkin tyylit */
 nav {
     display: flex;
     justify-content: space-between;
@@ -52,6 +59,7 @@ nav {
     padding: 0 1em;
 }
 
+/* Määrittelee logon tyylit */
 .logo {
     color: #F5F0B5;
     font-family: 'Logo';
@@ -59,6 +67,7 @@ nav {
     font-weight: bold;
 }
 
+/* Määrittelee navigointilistan tyylit */
 nav ul {
     list-style: none;
     display: flex;
@@ -67,10 +76,12 @@ nav ul {
     padding: 0;
 }
 
+/* Määrittelee navigointilistan kohteiden tyylit */
 nav ul li {
     display: inline;
 }
 
+/* Määrittelee navigointilistan linkkien tyylit */
 nav ul li a {
     color: #F5F0B5;
     text-decoration: none;
@@ -79,10 +90,12 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
+/* Määrittelee navigointilistan linkkien hover-tilan tyylit */
 nav ul li a:hover {
     background-color: #2B322D;
 }
 
+/* Määrittelee hero-sektion tyylit */
 .hero {
     background-image: url('images/burger2.jpg');
     background-size: cover;
@@ -96,6 +109,7 @@ nav ul li a:hover {
     position: relative;
 }
 
+/* Määrittelee hero-sektion päälle tulevan tumman kerroksen tyylit */
 .hero::after {
     content: '';
     position: absolute;
@@ -106,6 +120,7 @@ nav ul li a:hover {
     background: rgba(0, 0, 0, 0.5);
 }
 
+/* Määrittelee hero-sektion sisältöelementin tyylit */
 .hero-content {
     font-family: 'second';
     position: relative;
@@ -113,17 +128,20 @@ nav ul li a:hover {
     color: #F5F0B5;
 }
 
+/* Määrittelee hero-sektion otsikon tyylit */
 .hero h1 {
     font-size: 3em;
     margin: 0.5em 0;
 }
 
+/* Määrittelee hero-sektion tekstin tyylit */
 .hero p {
     color: #B6C566;
     font-size: 1.2em;
     margin: 1em 0;
 }
 
+/* Määrittelee yleisen painikkeen tyylit */
 .btn {
     display: inline-block;
     background-color: #c4524c;
@@ -135,15 +153,12 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
+/* Määrittelee painikkeen hover-tilan tyylit */
 .btn:hover {
     background-color: #78413E;
 }
 
-section {
-    padding: 3em 1em;
-    text-align: center;
-}
-
+/* Määrittelee section-otsikoiden tyylit */
 section h2 {
     font-family: 'second';
     color: #78413E;
@@ -151,6 +166,7 @@ section h2 {
     margin-bottom: 0.5em;
 }
 
+/* Määrittelee section-tekstien tyylit */
 section p {
     font-family: 'text';
     font-size: 1.2em;
@@ -159,11 +175,7 @@ section p {
     color: #2B322D;
 }
 
-.hero2 {
-    color: #e5e8e9;
-    
-}
-
+/* Määrittelee menu-sektion listan tyylit */
 .menu-list {
     list-style: none;
     padding: 0;
@@ -172,6 +184,7 @@ section p {
     text-align: left;
 }
 
+/* Määrittelee menu-sektion listan kohteiden tyylit */
 .menu-list li {
     display: flex;
     justify-content: space-between;
@@ -179,12 +192,14 @@ section p {
     border-bottom: 1px solid #78413E;
 }
 
+/* Määrittelee hampurilaisnimien tyylit menu-sektiossa */
 .menu-list .burger-name {
     font-family: 'text';
     font-weight: bold;
     font-size: 15px;
 }
 
+/* Määrittelee about-sektion sisällön tyylit */
 .about-content {
     display: flex;
     flex-direction: row;
@@ -195,35 +210,39 @@ section p {
     text-align: left;
 }
 
+/* Määrittelee about-sektion tekstin tyylit */
 .about-text {
-    
     flex: 2;
     margin: 5 auto;
 }
 
+/* Määrittelee about-sektion kuvan tyylit */
 .about-image {
     flex: 1;
     margin-left: 2em;
 }
 
+/* Määrittelee about-sektion kuvan tyylit */
 .about-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-
 }
 
+/* Määrittelee contact-sektion tyylit */
 .contact {
     padding: 3em 1em;
     background-color: #faffdd;
     text-align: center;
 }
 
+/* Määrittelee contact-sektion otsikon tyylit */
 .contact h2 {
     font-size: 2em;
     margin-bottom: 1em;
 }
 
+/* Määrittelee contact-sektion informaation tyylit */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -232,36 +251,43 @@ section p {
     margin: 0 auto;
 }
 
+/* Määrittelee yksittäisen contact-sektion kohteen tyylit */
 .contact-item {
     margin-bottom: 2em;
 }
 
+/* Määrittelee yksittäisen contact-sektion kohteen otsikon tyylit */
 .contact-item h3 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
 
+/* Määrittelee yksittäisen contact-sektion kohteen tekstin tyylit */
 .contact-item p {
     font-size: 1.1em;
     line-height: 1.5;
 }
 
+/* Määrittelee maps-sektion tyylit */
 .maps {
     padding: 3em 1em;
     background-color: #fff;
     text-align: center;
 }
 
+/* Määrittelee maps-sektion otsikon tyylit */
 .maps h2 {
     font-size: 2em;
     margin-bottom: 1em;
 }
 
+/* Määrittelee maps-sektion karttakontainerin tyylit */
 .maps-container {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Määrittelee maps-sektion iframe-elementin tyylit */
 .maps-container iframe {
     width: 100%;
     height: 450px;
@@ -269,17 +295,20 @@ section p {
     border-radius: 10px;
 }
 
+/* Määrittelee feedback-sektion tyylit */
 .feedback {
     padding: 3em 1em;
     background-color: #fcfff0;
     text-align: center;
 }
 
+/* Määrittelee feedback-sektion otsikon tyylit */
 .feedback h2 {
     font-size: 2em;
     margin-bottom: 1em;
 }
 
+/* Määrittelee feedback-lomakkeen tyylit */
 .feedback-form {
     max-width: 600px;
     margin: 0 auto;
@@ -288,12 +317,14 @@ section p {
     align-items: center;
 }
 
+/* Määrittelee palautelomakkeen otsikoiden tyylit */
 .feedback-form label {
     font-size: 1.2em;
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
 
+/* Määrittelee palautelomakkeen tekstikenttien ja tekstialueen tyylit */
 .feedback-form input,
 .feedback-form textarea {
     font-family: 'text';
@@ -305,6 +336,7 @@ section p {
     font-size: 1em;
 }
 
+/* Määrittelee palautelomakkeen painikkeen tyylit */
 .feedback-form button {
     padding: 0.7em 1.5em;
     font-size: 1.2em;
@@ -316,16 +348,18 @@ section p {
     transition: background-color 0.3s ease;
 }
 
+/* Määrittelee palautelomakkeen painikkeen hover-tilan tyylit */
 .feedback-form button:hover {
     background-color: #78413E;
 }
 
+/* Määrittelee footer-elementin tyylit */
 footer {
     background-color: #78413E;
     color: white;
     text-align: center;
     padding: 1em 0;
-     position: relative;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
