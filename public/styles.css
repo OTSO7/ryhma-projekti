@@ -210,6 +210,17 @@ section p {
     text-align: left;
 }
 
+.locations, h3 {
+
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.locations, p {
+
+    padding-bottom: 20px;
+}
+
 /* Määrittelee about-sektion tekstin tyylit */
 .about-text {
     flex: 2;
